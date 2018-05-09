@@ -3,17 +3,17 @@
   <body>
     <h1>Library</h1>
     <hr />
-    <h3>All books:</h3>
+    <h3>All authors:</h3>
     @if (Model.Count != 0)
     {
       <ul>
-      @foreach (var book in Model)
+      @foreach (var author in Model)
       {
-        <li><a href='/books/@book.GetId()'>@book.GetName(), @book.GetGenre()</a></li>
+        <li><a href='/authors/@author.GetId()'>@author.GetName()</a></li>
       }
       </ul>
     }
-    <h4><a href="/books/new">Add new book</a></h4>
+    <h4><a href="/authors/new">Add new author</a></h4>
     <p><a href="/">Return to Homepage</a></p>
 
   </body>
